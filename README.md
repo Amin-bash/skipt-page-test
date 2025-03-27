@@ -1,3 +1,5 @@
+# React + TypeScript + Vite
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
@@ -9,7 +11,7 @@ Currently, two official plugins are available:
 
 ## 💡 Project Structure
 
-
+```
 src/
 ├── features/
 │   └── multi-step-skip-form/
@@ -49,23 +51,23 @@ src/
 ├── App.tsx
 ├── index.css
 └── main.tsx
-
+```
 
 ### Why this structure?
 
-- *Feature-based organization (features/)*  
+- **Feature-based organization (`features/`)**  
   Each feature gets its own isolated folder to encapsulate components, logic, and tests—making the codebase scalable and easier to navigate as it grows.
 
-- *Co-located files*  
-  Styles, tests, and component logic are kept together (.module.scss, .spec.tsx, and .tsx) to reduce file jumping and help with context.
+- **Co-located files**  
+  Styles, tests, and component logic are kept together (`.module.scss`, `.spec.tsx`, and `.tsx`) to reduce file jumping and help with context.
 
-- *Reusable shared components (component/)*  
-  Common UI elements (like BottomBar, SkipCard) are abstracted here so they can be used in multiple features without duplication.
+- **Reusable shared components (`component/`)**  
+  Common UI elements (like `BottomBar`, `SkipCard`) are abstracted here so they can be used in multiple features without duplication.
 
-- *Service layer (services/)*  
+- **Service layer (`services/`)**  
   Centralizes API calls and data handling logic to keep components clean and focused only on UI/state.
 
-- *Store (store/)*  
+- **Store (`store/`)**  
   Manages global app state using Redux Toolkit, keeping state logic consistent and maintainable.
 
 ---
@@ -74,35 +76,36 @@ src/
 
 Install dependencies:
 
-bash
+```bash
 npm install
 # or
 yarn install
 # or
 pnpm install
-
+```
 
 ## 🔧 Running the App
 
 Start development server:
 
-bash
+```bash
 npm run dev
-
+```
 
 Run tests:
 
-bash
+```bash
 npm run test
-
+```
 
 Build for production:
 
-bash
+```bash
 npm run build
-
+```
 
 Preview production build:
 
-bash
+```bash
 npm run preview
+```
