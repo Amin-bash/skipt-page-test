@@ -1,0 +1,76 @@
+.formProgressBar {
+    margin: 0 auto;
+    background-color: #121212;
+    justify-content: center;
+    margin-bottom: 2rem;
+    display: flex;
+    overflow-x: auto;
+    box-sizing: border-box;
+  }
+  
+  .stepsSection {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; 
+    flex-shrink: 0;
+    min-width: max-content; 
+  
+    .step {
+      display: flex;
+      align-items: center;
+      color: rgba(126 126 126 / 1);
+      transition: color 0.2s;
+      cursor: pointer;
+      min-width: max-content;
+  
+      &.active {
+        color: #fff;
+  
+        .icon {
+          color: #0037c1;
+        }
+      }
+  
+      svg {
+        margin-right: 0.5rem;
+      }
+  
+      .label {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+  
+      &:hover {
+        color: #d1d5db;
+      }
+    }
+  
+    .line {
+      width: 4rem;
+      height: 1px;
+      background-color: #2f2f2f;
+      margin: 0 1rem;
+  
+      &.lineActive {
+        background-color: #0037c1;
+      }
+    }
+  }
+  
+
+  @media (max-width: 600px) {
+    .stepsSection {
+      .step {
+        min-width: 100px;
+  
+        .label {
+          font-size: 0.95rem;
+        }
+      }
+  
+      .line {
+        width: 2rem;
+        margin: 0 0.5rem;
+      }
+    }
+  }

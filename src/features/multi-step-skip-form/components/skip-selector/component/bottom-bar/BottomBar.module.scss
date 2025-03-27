@@ -1,0 +1,149 @@
+.bottomBarContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #1c1c1c;
+  padding: 1rem 1.5rem;
+
+  .bottomBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    gap: 1rem; /* space between elements in a row */
+
+    .skipInfo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      span {
+        color: rgb(156 163 175);
+        font-size: 1rem;
+      }
+      .skipPrice {
+        color: #0037c1;
+        font-weight: 600;
+        font-size: 1.4rem;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      gap: 0.75rem;
+
+      .backBtn {
+        background-color: #2f2f2f;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        font-size: 1rem;
+
+        &:hover {
+          background-color: #3f3f3f;
+        }
+      }
+
+      .continueBtn {
+        background-color: #0037c1;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &:hover {
+          background-color: #0037c1;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        span {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  /*
+   * MEDIA QUERIES
+   */
+
+   @media (max-width: 1200){
+    .bottomBar{
+      width: 100%;
+    }
+   }
+
+  @media (max-width: 1024px) {
+    .bottomBar {
+      gap: 0.75rem;
+      flex-direction: column;
+
+      .skipInfo {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .buttons {
+        width: 100%;
+        .backBtn,
+        .continueBtn {
+          width: inherit;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bottomBar {
+      width: 95%;
+      gap: 0.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.75rem 1rem;
+
+    .bottomBar {
+      width: 100%;
+      margin: 0 auto;
+      gap: 0.5rem;
+
+      .skipInfo {
+        gap: 0.5rem;
+
+        span {
+          font-size: 0.9rem;
+        }
+        .skipPrice {
+          font-size: 1.2rem;
+        }
+      }
+
+      .buttons {
+        gap: 0.5rem;
+
+        .backBtn,
+        .continueBtn {
+          font-size: 0.9rem;
+          padding: 0.45rem 0.75rem;
+        }
+      }
+    }
+  }
+}
